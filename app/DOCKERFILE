@@ -2,7 +2,7 @@ FROM python:3.8-slim
 
 WORKDIR /app
 
-RUN apt install opencv -y
+RUN apt-get install python3-opencv
 
 RUN pip install -r opencv-python flask
 
