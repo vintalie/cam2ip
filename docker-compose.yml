@@ -1,17 +1,10 @@
-
-version: '3.8'
-
 services:
   app:
-    image: python:3.8-slim
     build:
       dockerfile: ./app/DOCKERFILE
     container_name: export-cam-app
-    working_dir: /app
     devices:
       - /dev/video0:/dev/video0
-    volumes:
-      - ./app:/app
     ports:
       - "5000:5000"
-    command: python main.py
+    
