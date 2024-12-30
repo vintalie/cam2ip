@@ -2,9 +2,13 @@ FROM python:3.8-slim
 
 WORKDIR /app
 
+RUN apt update -y
+
+RUN apt upgrade -y
+
 RUN apt-get install python3-opencv
 
-RUN pip install -r opencv-python flask
+RUN pip install opencv-python flask
 
 CMD ["python", "main.py"]
 
